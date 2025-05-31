@@ -32,7 +32,7 @@ const TransactionList = ({ type }) => {
     if (!confirm) return;
 
     try {
-      const url = `http://localhost:5000/api/transactions/${type}/${id}`;
+      const url = `http://three-eye-backend.onrender.com/api/transactions/${type}/${id}`;
       await axios.delete(url, {
         data: { userId: localStorage.getItem("userId") }
       });

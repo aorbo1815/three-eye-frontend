@@ -17,7 +17,7 @@ const TransactionForm = ({ type }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = `http://localhost:5000/api/transactions/${type}`;
+      const url = `http://three-eye-backend.onrender.com/api/transactions/${type}`;
       await axios.post(url, form);
       alert(`${type} transaction added!`);
       setForm({ slipNo: "", cause: "", toWhom: "", byWhom: "", amount: "" });
