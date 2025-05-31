@@ -8,7 +8,7 @@ const ForgotPassword = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/forgot-password", { email });
+      const res = await axios.post("http://three-eye-backend.onrender.com/api/auth/forgot-password", { email });
       setMessage(res.data.message || "Check your email for reset link.");
     } catch (err) {
       setMessage(err.response?.data?.error || "Error sending reset link.");

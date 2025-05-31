@@ -15,7 +15,7 @@ const DashboardPage = () => {
   }, []);
 
   const fetchSummary = async () => {
-    const res = await axios.get("http://localhost:5000/api/transactions/dashboard");
+    const res = await axios.get("http://three-eye-backend.onrender.com/api/transactions/dashboard");
     setSummary(res.data);
   };
 
