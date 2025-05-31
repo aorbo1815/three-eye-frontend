@@ -12,7 +12,7 @@ const ResetPassword = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(`http://localhost:5000/api/auth/reset-password/${token}`, { password });
+      await axios.post(`http://three-eye-backend.onrender.com/api/auth/reset-password/${token}`, { password });
       alert("Password reset successful. You can now login.");
       navigate("/login");
     } catch (err) {

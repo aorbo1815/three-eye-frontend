@@ -14,7 +14,7 @@ const TransactionList = ({ type }) => {
   }, [type]);
 
   const fetchData = async () => {
-    let url = `http://localhost:5000/api/transactions/${type}s`;
+    let url = `http://three-eye-backend.onrender.com/api/transactions/${type}s`;
     if (fromDate && toDate) {
       url += `?from=${fromDate}&to=${toDate}`;
     }
@@ -23,7 +23,7 @@ const TransactionList = ({ type }) => {
   };
 
   const fetchBalance = async () => {
-    const res = await axios.get(`http://localhost:5000/api/transactions/balance`);
+    const res = await axios.get(`http://three-eye-backend.onrender.com/api/transactions/balance`);
     setBalance(res.data);
   };
 
