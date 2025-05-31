@@ -12,7 +12,7 @@ import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
 
 const LoginPage = () => <div>Login Page</div>;
-const RegisterPage = () => <div>Register Page</div>;
+const RegisterPage = () => <div>Register Page</div>; // ✅ different name
 
 function App() {
   return (
